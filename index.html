@@ -113,16 +113,32 @@ ______________________________________________________
 </script> 
 </div> 
 &nbsp;<br>
+ 
 <!-- BEG tohle je náhrada GIF animace počasí, kterou chmi zrušil k 1.1.2026 -->
-<a href="https://mapy.in-pocasi.cz" target="_blank"  title="Detailní radar In-počasí" style="display:block; text-align:center;">
-  <div style="position: relative; margin: 0 auto; display: inline-block; text-align: center;">  <!-- dále pozor na nastavení velikosti obrázků - width musí být shodné pro mapu i radar ! -->
-    <img src="https://media.in-pocasi.cz/images/content/mapa-radar.png" alt="Mapa ČR" style="display:block; width:90%;">
-    <img id="radar" src="https://www.in-pocasi.cz/data/chmi_v2/pred_0.png" alt="Radarové srážky" style="position:absolute; top:0; left:0; width:90%;">
+<a href="https://mapy.in-pocasi.cz"
+   target="_blank"
+   title="Detailní radar In-počasí"
+   style="display:block; text-align:center;">
+
+  <div style="position: relative; margin: 0 auto; display: inline-block; width: 80%;">   <!-- na tomto width řídit velikost radarmapy -->
+
+    <img
+      src="https://media.in-pocasi.cz/images/content/mapa-radar.png"
+      alt="Mapa ČR"
+      style="display:block; width:100%;">
+
+    <img
+      id="radar"
+      src="https://www.in-pocasi.cz/data/chmi_v2/pred_0.png"
+      alt="Radarové srážky"
+      style="position:absolute; top:0; left:0; width:100%;">
+
   </div>
+
 </a>
 
 <script>
-  (function () {
+(function () {
 
   var frames = [
     "https://www.in-pocasi.cz/data/chmi_v2/pred_0.png",
@@ -143,6 +159,7 @@ ______________________________________________________
 
 })();
 </script>
+
 <!-- END tohle je náhrada GIF animace počasí, kterou chmi zrušil k 1.1.2026 -->
 
 
@@ -200,6 +217,7 @@ ______________________________________________________
 </p>
 </body>
 </html>
+
 
 
 
