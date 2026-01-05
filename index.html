@@ -133,6 +133,76 @@ ______________________________________________________
  
 <!-- <img src="http://vvv.chmi.cz/radar/radar.gif" border="0" alt="ÈHMÚ - radar"></a> &nbsp; -->
 
+
+
+<!-- BEG tohle je náhrada GIF animace počasí, kterou chmi zrušil k 1.1.2026 -->
+<a href="https://mapy.in-pocasi.cz"
+   target="_blank"
+   title="Detailní radar In-počasí"
+   style="display:block; text-align:center;">
+
+  <div style="
+    position: relative;
+    width: 75%;
+    margin: 0 auto;
+  ">
+
+    <img
+      src="https://media.in-pocasi.cz/images/content/mapa-radar.png"
+      alt="Mapa ČR"
+      style="width:100%; display:block;">
+
+    <img
+      id="radar"
+      src="https://www.in-pocasi.cz/data/chmi_v2/pred_0.png"
+      alt="Radarové srážky"
+      style="
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+      ">
+
+  </div>
+
+</a>
+
+<script>
+(function () {
+
+  var frames = [
+    "https://www.in-pocasi.cz/data/chmi_v2/pred_0.png",
+    "https://www.in-pocasi.cz/data/chmi_v2/pred_1.png",
+    "https://www.in-pocasi.cz/data/chmi_v2/pred_2.png",
+    "https://www.in-pocasi.cz/data/chmi_v2/pred_3.png",
+    "https://www.in-pocasi.cz/data/chmi_v2/pred_4.png",
+    "https://www.in-pocasi.cz/data/chmi_v2/pred_5.png"
+  ];
+
+  var i = 0;
+  var img = document.getElementById("radar");
+
+  setInterval(function () {
+    i = (i + 1) % frames.length;
+    img.src = frames[i];
+  }, 500);
+
+})();
+</script>
+<!-- END tohle je náhrada GIF animace počasí, kterou chmi zrušil k 1.1.2026 -->
+
+
+
+
+
+
+
+
+
+
+
+ 
+
 <a href="http://www.wetterzentrale.de" title="Wetter"><img border="0" src="images/wetterzentrale.png" height="22pix"></a>&nbsp;
 <a href="http://www.wetteronline.de/radar.htm" title="radar - Germany">D</a>&nbsp;
 <a href="http://www.austrocontrol.at/wetter/wetter_fuer_alle/wetterradar" title="radar - Austria">A</a>&nbsp;
@@ -202,10 +272,23 @@ RainViewer
 
 
 <a href="https://mapy.in-pocasi.cz" target="_blank">
-  <img
-    id="radar"
-    src="https://www.in-pocasi.cz/data/chmi_v2/pred_0.png"
-    width="100%">
+
+  <div style="position:relative; width:100%; max-width:800px;">
+
+    <img
+      src="https://media.in-pocasi.cz/images/content/mapa-radar.png"
+      width="100%"
+      alt="Mapa ČR">
+
+    <img
+      id="radar"
+      src="https://www.in-pocasi.cz/data/chmi_v2/pred_0.png"
+      width="100%"
+      alt="Radar"
+      style="position:absolute; top:0; left:0;">
+
+  </div>
+
 </a>
 
 <script>
@@ -215,7 +298,8 @@ RainViewer
     "https://www.in-pocasi.cz/data/chmi_v2/pred_1.png",
     "https://www.in-pocasi.cz/data/chmi_v2/pred_2.png",
     "https://www.in-pocasi.cz/data/chmi_v2/pred_3.png",
-    "https://www.in-pocasi.cz/data/chmi_v2/pred_4.png"
+    "https://www.in-pocasi.cz/data/chmi_v2/pred_4.png",
+    "https://www.in-pocasi.cz/data/chmi_v2/pred_5.png"
   ];
 
   var i = 0;
@@ -225,7 +309,7 @@ RainViewer
   setInterval(function () {
     i = (i + 1) % frames.length;
     img.src = frames[i];
-  }, 700);
+  }, 900);
 })();
 </script>
 
@@ -241,6 +325,7 @@ RainViewer
 </p>
 </body>
 </html>
+
 
 
 
