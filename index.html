@@ -128,47 +128,20 @@ ______________________________________________________
 <a href="http://www.meteoskop.cz" title="Meteoskop"><img border="0" src="images/meteoskop.ico" height="22pix"></a> 
 
 &nbsp;
- <!-- <a href="https://www.chmi.cz/files/portal/docs/meteo/rad/inca-cz/short.html?display=gmaps&gmap_zoom=8&prod=czrad_maxz&opa1=0.7&opa2=0.8&nselect=20&nselect_fct=6&di=1&rep=1&add=3&update=4&lat=50.041&lon=15.779&lang=CZ" title="radar">
+<!-- <a href="https://www.chmi.cz/files/portal/docs/meteo/rad/inca-cz/short.html?display=gmaps&gmap_zoom=8&prod=czrad_maxz&opa1=0.7&opa2=0.8&nselect=20&nselect_fct=6&di=1&rep=1&add=3&update=4&lat=50.041&lon=15.779&lang=CZ" title="radar">
 <img src="http://portal.chmi.cz/files/portal/docs/meteo/rad/mobile/ra6_30min.gif" border=0 alt="ČHMÚ - radar"/></a>&nbsp; -->
- 
 <!-- <img src="http://vvv.chmi.cz/radar/radar.gif" border="0" alt="ÈHMÚ - radar"></a> &nbsp; -->
 
-
-
 <!-- BEG tohle je náhrada GIF animace počasí, kterou chmi zrušil k 1.1.2026 -->
-<a href="https://mapy.in-pocasi.cz"
-   target="_blank"
-   title="Detailní radar In-počasí"
-   style="display:block; text-align:center;">
-
-  <div style="
-    position: relative;
-    width: 75%;
-    margin: 0 auto;
-  ">
-
-    <img
-      src="https://media.in-pocasi.cz/images/content/mapa-radar.png"
-      alt="Mapa ČR"
-      style="width:100%; display:block;">
-
-    <img
-      id="radar"
-      src="https://www.in-pocasi.cz/data/chmi_v2/pred_0.png"
-      alt="Radarové srážky"
-      style="
-        position:absolute;
-        top:0;
-        left:0;
-        width:100%;
-      ">
-
+<a href="https://mapy.in-pocasi.cz" target="_blank"  title="Detailní radar In-počasí" style="display:block; text-align:center;">
+  <div style="position: relative; margin: 0 auto; display: inline-block;">
+    <img src="https://media.in-pocasi.cz/images/content/mapa-radar.png" alt="Mapa ČR" display:block;">
+    <img id="radar" src="https://www.in-pocasi.cz/data/chmi_v2/pred_0.png" alt="Radarové srážky" style="position:absolute;top:0;left:0;">
   </div>
-
 </a>
 
 <script>
-(function () {
+  (function () {
 
   var frames = [
     "https://www.in-pocasi.cz/data/chmi_v2/pred_0.png",
@@ -185,7 +158,7 @@ ______________________________________________________
   setInterval(function () {
     i = (i + 1) % frames.length;
     img.src = frames[i];
-  }, 500);
+  }, 600);
 
 })();
 </script>
@@ -193,15 +166,6 @@ ______________________________________________________
 
 
 
-
-
-
-
-
-
-
-
- 
 
 <a href="http://www.wetterzentrale.de" title="Wetter"><img border="0" src="images/wetterzentrale.png" height="22pix"></a>&nbsp;
 <a href="http://www.wetteronline.de/radar.htm" title="radar - Germany">D</a>&nbsp;
@@ -325,6 +289,7 @@ RainViewer
 </p>
 </body>
 </html>
+
 
 
 
