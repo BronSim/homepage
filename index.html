@@ -201,6 +201,33 @@ RainViewer
 
 
 
+<a href="https://mapy.in-pocasi.cz" target="_blank">
+  <img
+    id="radar"
+    src="https://www.in-pocasi.cz/data/chmi_v2/pred_0.png"
+    width="100%">
+</a>
+
+<script>
+(function () {
+  var frames = [
+    "https://www.in-pocasi.cz/data/chmi_v2/pred_0.png",
+    "https://www.in-pocasi.cz/data/chmi_v2/pred_1.png",
+    "https://www.in-pocasi.cz/data/chmi_v2/pred_2.png",
+    "https://www.in-pocasi.cz/data/chmi_v2/pred_3.png",
+    "https://www.in-pocasi.cz/data/chmi_v2/pred_4.png"
+  ];
+
+  var i = 0;
+  var img = document.getElementById("radar");
+  if (!img) return;
+
+  setInterval(function () {
+    i = (i + 1) % frames.length;
+    img.src = frames[i];
+  }, 700);
+})();
+</script>
 
 
 
@@ -214,6 +241,7 @@ RainViewer
 </p>
 </body>
 </html>
+
 
 
 
