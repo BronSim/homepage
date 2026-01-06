@@ -114,33 +114,12 @@ ______________________________________________________
 </div> 
  
 <!-- BEG tohle je náhrada GIF animace počasí, kterou chmi zrušil k 1.1.2026 -->
-<a href="https://mapy.in-pocasi.cz"
-   target="_blank"
-   title="Detailní radar In-počasí"
-   style="display:block; text-align:center;">
-
-  <div style="
-    position: relative;
-    margin: 0 auto;
-    display: inline-block;
-    width: 500px;
-  ">
-
-    <img
-      src="https://media.in-pocasi.cz/images/content/mapa-radar.png"
-      alt="Mapa ČR"
-      style="display:block; width:100%;">
-
-    <img
-      id="radar"
-      src="https://www.in-pocasi.cz/data/chmi_v2/pred_0.png"
-      alt="Radarové srážky"
-      style="position:absolute; top:0; left:0; width:100%;">
-
+<a href="https://mapy.in-pocasi.cz" target="_blank" title="Detailní radar In-počasí" style="display:block; text-align:center;">
+  <div style=" position: relative; margin: 0 auto; display: inline-block; width: 500px;">
+    <img src="https://media.in-pocasi.cz/images/content/mapa-radar.png" alt="Mapa" style="display:block; width:100%;">
+    <img id="radar" src="https://www.in-pocasi.cz/data/chmi_v2/pred_0.png" alt="Radar" style="position:absolute; top:0; left:0; width:100%;">
   </div>
-
 </a>
-
 
 <script>
 (function () {
@@ -159,7 +138,7 @@ ______________________________________________________
 
   setInterval(function () {
     i = (i + 1) % frames.length;
-    img.src = frames[i];
+    img.src = frames[i] + "?t=" + Date.now();
   }, 700);
 
 })();
@@ -223,6 +202,7 @@ ______________________________________________________
 </p>
 </body>
 </html>
+
 
 
 
